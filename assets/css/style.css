@@ -1,0 +1,394 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .2s linear;
+    transition:width none;
+}
+:root {
+--selBg-color: #b833e9;
+--text-color: #ffff;
+--optionBgHov-color: #ffff;
+--optionTextHov-color: #ae43d5;
+--note-color: #ffeccf;
+--noteBor-color: #f9dc11ad;
+--notep-color: antiquewhite;
+}
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--black);
+}
+body {
+    position: relative;
+}
+h2.title {
+    margin-top: 7rem;
+}
+
+div {
+  animation: rotate-all 2s 0 infinite linear alternate;
+}
+
+.div1 {
+    width: 80px;
+    height: 80px;
+    background-color: #b833e9;
+    position: relative;
+    margin: auto;
+    animation: square-to-circle 2.5s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate-reverse;
+}
+
+.div2 {
+    width: 80px;
+  height: 80px;
+  background-color: #b833e9;
+  position: relative;
+  margin: auto;
+  animation: square-to-circle2 2.5s .42s infinite cubic-bezier(1,.015,.295,1.225) alternate-reverse;
+}
+
+#one {
+  top: 150px;
+}
+ 
+#two {
+  top: 150px;
+  right: 80px;
+}
+
+#three {
+  top: 150px;
+}
+
+#four {
+  bottom: 10px;
+  left: 80px;
+}
+
+@keyframes square-to-circle {
+  0%  {
+    border-radius:0 0 0 0;
+    background:;
+    transform:rotate(45deg);
+  }
+  25%  {
+    border-radius:50% 0 0 0;
+    background:#ae43d5;
+    transform:rotate(135deg);
+  }
+  50%  {
+    border-radius:50% 50% 0 0;
+    background:#ab54cb;
+    transform:rotate(180deg);
+  }
+  75%  { 
+    border-radius:50% 50% 50% 0;
+    background:#bc71d7;
+    transform:rotate(315deg);
+  }
+  100% {  
+    border-radius:50%;
+    background:#bc82d1;
+    transform:rotate(404deg);
+  }
+}
+
+@keyframes square-to-circle2 {
+  0%  {
+    border-radius:0 0 0 0;
+    background:;
+    transform:rotate(45deg);
+  }
+  25%  {
+    border-radius:0 0 50% 0;
+    background:#ae43d5;
+    transform:rotate(135deg);
+  }
+  50%  {
+    border-radius:0 0 50% 50%;
+    background:#ab54cb;
+    transform:rotate(180deg);
+  }
+  75%  { 
+    border-radius:50% 0 50% 50%;
+    background:#bc71d7;
+    transform:rotate(315deg);
+  }
+  100% {  
+    border-radius:50%;
+    background:#bc82d1;
+    transform:rotate(404deg);
+  }
+}
+span.ex1 {
+    color: var(--selBg-color);
+    font-size: 23px;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--selBg-color);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+section{
+    padding:5rem 9%;
+}
+.scroll-container {
+  scroll-behavior: smooth;
+}
+div#start {
+    background: var(--selBg-color);
+    color: var(--text-color);
+    padding-top: 13px;
+}
+.select {
+    height: 0px;
+    transition: 1s height ease-in-out;
+    background: var(--selBg-color);
+    overflow: hidden;
+    padding-top: 15px;
+}
+.select .option a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.select.start {
+    height: 35vh;
+}
+div#select {
+    overflow-y: scroll;
+    border: 1px solid black;
+    overflow-x: hidden;
+}
+
+div#start i {
+    margin-left: 111px;
+    transition: 1s height ease-in-out;
+}
+div#start i.Hover {
+    transform: rotate(90deg);
+    transition: 1s height ease-in-out;
+}
+.option {
+    padding-top: 10px;
+    transition: 1s height ease-in-out;
+}
+.option:hover {
+    background: var(--optionBgHov-color);
+}
+.option:hover a {
+    color: var(--optionTextHov-color);
+}
+.content img {
+    width: 100%;
+}
+.note {
+    height: 111px;
+    background: var(--note-color);
+    padding-top: 17px;
+    border-left: 10px solid var(--noteBor-color);
+    padding-left: 22px;
+    margin-top: 15px;
+}
+span.N {
+    font-family: cursive;
+    font-size: 18px;
+}
+p.state {
+    margin-top: 36px;
+}
+p.usestate span {
+    background: var(--notep-color);
+}
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+p.install {
+    font-size: 24px;
+    background: #c97de559;
+    border-radius: 6%;
+    text-align: center;
+    width: 40%;
+    margin-top: 40px;
+}
+
+
+
+
